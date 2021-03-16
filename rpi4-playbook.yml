@@ -30,7 +30,7 @@
       become: true 
       become_user: root
       apt:
-        state: present 
+        state: latest
         name: 
          - net-tools
          - curl 
@@ -88,6 +88,3 @@
         name: ubuntu
         shell: /bin/bash 
         group: docker 
-
-    - name: run dd command to backup and image
-      ansible.builtin.shell: backup.sh >> backup_log.txt 
